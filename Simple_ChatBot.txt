@@ -1,0 +1,34 @@
+from nltk.chat.util import Chat, reflections
+
+chatlist = [
+
+    ["hi|hey|hello",["Hello", "Hey soutik",]],
+
+
+
+    ['my name is (.*)', ['hi %1']],
+    ['hi name is (.*)', ['hi %1']],
+    ['hello name is (.*)', ['hi %1']],
+    ['this is (.*)', ['hi %1']],
+
+    ["what is your name?",["You can call me a chatbot ?", ]],
+
+    ["how are you ?",["I am fine, thank you! How can i help you?"]],
+
+    ["i am looking for online guides , can you suggest?",
+        ["python is a great option to learn machine learning"]],
+
+    ["thanks for the suggestion",
+        ["Yes, this is a good choice)"]],
+]
+
+
+def chatbot():
+    print("Hi, I'm the chatbot you built")
+chatbot()
+
+
+chat = Chat(chatlist, reflections)
+chat.converse()  
+if __name__ == "__main__":
+    chatbot()
